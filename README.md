@@ -34,6 +34,8 @@ The CLI checks the recorded source and downloads changed skill contents. Re-run 
 
 Start Claude Code or Codex in the project after installation. Ask the agent to use an installed skill by name, or use the agent's skill picker/command where available. The root [`CLAUDE.md`](CLAUDE.md) and [`AGENTS.md`](AGENTS.md) describe how each agent should discover and follow repository skills.
 
+**Claude Code note:** Claude Code may also provide a built-in `/code-review`. Installing this repository's skill under the same name can shadow that command. If you need both, install this skill under a distinct name with `npx skills add BrandonLiang/skills --skill code-review --rename repo-code-review --agent claude-code --yes`, or install it only for Codex.
+
 ## Developing this repository
 
 Each skill lives in its own directory under `skills/` and must include a `SKILL.md` with `name` and `description` frontmatter. The Skills CLI discovers these files when installing the repository.
